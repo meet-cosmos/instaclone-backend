@@ -8,7 +8,7 @@ const path = require("path");
 app.use(cors());
 app.use(express.json());
 app.use(fileupload())
-const port = 8080;
+const port = 8080 || process.env.PORT;
 
 //mongodb connection
 mongoose.set('strictQuery', true)
